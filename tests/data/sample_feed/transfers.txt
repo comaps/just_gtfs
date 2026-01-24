@@ -3,3 +3,5 @@ from_stop_id,to_stop_id,transfer_type,min_transfer_time
 227,4,0,160
 314,11,1,
 385,11,2,
+385,11,,
+385,385,,

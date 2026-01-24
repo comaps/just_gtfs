@@ -250,7 +250,7 @@ TEST_CASE("Transfers")
   Feed feed(test_feed);
   REQUIRE_EQ(feed.read_feed(), ResultCode::OK);
   const auto & transfers = feed.get_transfers();
-  CHECK_EQ(transfers.size(), 4);
+  CHECK_EQ(transfers.size(), 3);
 
   CHECK_EQ(transfers[0].from_stop_id, "130");
   CHECK_EQ(transfers[0].to_stop_id, "4");
@@ -308,7 +308,7 @@ TEST_CASE("Read GTFS feed")
   CHECK_EQ(feed.get_shapes().size(), 8);
   CHECK_EQ(feed.get_stops().size(), 9);
   CHECK_EQ(feed.get_stop_times().size(), 28);
-  CHECK_EQ(feed.get_transfers().size(), 4);
+  CHECK_EQ(feed.get_transfers().size(), 3);
   CHECK_EQ(feed.get_frequencies().size(), 11);
   CHECK_EQ(feed.get_attributions().size(), 1);
   CHECK_EQ(feed.get_calendar().size(), 2);
