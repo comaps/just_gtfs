@@ -74,7 +74,7 @@ struct Result
 {
   Result() = default;
   Result(ResultCode && in_code) : code(in_code) {}
-  Result(const ResultCode & in_code, const Message & msg) : code(in_code), message(msg) {}
+  Result(const ResultCode & in_code, Message  msg) : code(in_code), message(std::move(msg)) {}
   bool operator==(ResultCode result_code) const { return code == result_code; }
   bool operator!=(ResultCode result_code) const { return !(*this == result_code); }
 
@@ -2247,8 +2247,8 @@ inline Result Feed::parse_csv(const std::string & filename,
     Result res = add_entity(record);
     if (res != ResultCode::OK)
     {
-      res.message += " while adding item from " + filename;
-      return res;
+      // TODO: Add logging (perhaps aggregated? I.e. percentage + total number of invalid rows that were skipped per feed?)
+      continue;
     }
   }
 
