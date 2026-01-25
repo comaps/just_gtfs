@@ -146,7 +146,7 @@ The library makes use of the C++17 features and therefore you have to use the ap
 - [**doctest**](https://github.com/onqtam/doctest) for unit testing.
 
 ## Contributing
-Please open a [Github issue](https://codeberg.org/comaps/just_gtfs/issues/new) with as much of the information as you're able to specify, or create a [pull request](https://codeberg.org/comaps/just_gtfs/pulls) according to our [guidelines](https://codeberg.org/comaps/just_gtfs/blob/master/docs/CPP_STYLE.md).
+Please open a [Github issue](https://codeberg.org/comaps/just_gtfs/issues/new) with as much of the information as you're able to specify, or create a [pull request](https://codeberg.org/comaps/just_gtfs/pulls) according to our [guidelines](https://codeberg.org/comaps/just_gtfs/src/branch/master/docs/CPP_STYLE.md).
 
 ## Resources
 [GTFS reference in Google GitHub repository](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)
